@@ -1,0 +1,26 @@
+{
+  "name": "webartificer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sissingclay/webartificer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sissingclay/webartificer/issues"
+  },
+  "homepage": "https://github.com/sissingclay/webartificer#readme",
+  "dependencies": {
+    "spectre.css": "^0.5.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6"
+  }
+}

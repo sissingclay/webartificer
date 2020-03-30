@@ -1,0 +1,4 @@
+main a {
+    color: $dark-grey;
+    @include fontHeavier();
+}

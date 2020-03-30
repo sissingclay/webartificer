@@ -1,0 +1,10 @@
+.menu {
+    position: relative;
+    background-color: transparent;
+
+    &__wrapper {
+        overflow-x: none;
+        overflow-y: none;
+        white-space: wrap;
+    }
+}

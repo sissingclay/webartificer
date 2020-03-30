@@ -1,26 +1,16 @@
 {
-  "name": "webartificer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sissingclay/webartificer.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sissingclay/webartificer/issues"
-  },
-  "homepage": "https://github.com/sissingclay/webartificer#readme",
-  "dependencies": {
-    "spectre.css": "^0.5.0"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.23.6"
-  }
+    "name": "web_artificer",
+    "version": "1.0.0",
+    "scripts": {
+        "gulp": "gulp"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "gulp": "^4.0.2",
+        "gulp-data": "^1.3.1",
+        "gulp-nunjucks-render": "^2.2.3",
+        "gulp-sass": "^4.0.2",
+        "nunjucks": "^2.4.2",
+        "nunjucks-cli": "^0.4.8"
+    }
 }

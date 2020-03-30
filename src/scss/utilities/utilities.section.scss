@@ -1,0 +1,11 @@
+.section {
+    &.-full {
+        margin-left: -$spacer;
+        margin-right: -$spacer;
+    }
+
+    &__content {
+        padding: $spacer $spacer 0;
+        background-color: $smokey;
+    }
+}

@@ -1,0 +1,27 @@
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $smokey;
+    width: 100%;
+    z-index: 9;
+
+    &__wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -ms-overflow-style: none; // Internet Explorer 10+
+        scrollbar-width: none; // Firefox
+
+        &::-webkit-scrollbar {
+            display: none; // Safari and Chrome
+        }
+    }
+
+    &__link {
+        font-size: 1.25rem;
+        padding: ($spacer * 0.75) $spacer;
+        display: inline-block;
+        color: $dark-grey;
+    }
+}

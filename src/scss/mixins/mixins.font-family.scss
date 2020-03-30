@@ -1,0 +1,10 @@
+$font-family-thin: 'Open Sans Condensed', sans-serif;
+$font-family-heavier: 'Jura', sans-serif;
+
+@mixin fontDefault() {
+    font-family: $font-family-thin;
+}
+
+@mixin fontHeavier() {
+    font-family: $font-family-heavier;
+}

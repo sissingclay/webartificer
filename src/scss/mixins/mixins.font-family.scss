@@ -1,5 +1,5 @@
-$font-family-thin: 'Open Sans Condensed', sans-serif;
-$font-family-heavier: 'Jura', sans-serif;
+$font-family-thin: 'Times New Roman', Times, serif;
+$font-family-heavier: 'Montserrat', sans-serif;
 
 @mixin fontDefault() {
     font-family: $font-family-thin;

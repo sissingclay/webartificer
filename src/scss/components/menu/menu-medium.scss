@@ -1,10 +1,43 @@
 .menu {
     position: relative;
     background-color: transparent;
+    text-align: right;
+    padding-top: 1.5rem;
 
     &__wrapper {
-        overflow-x: none;
-        overflow-y: none;
-        white-space: wrap;
+        display: block;
+    }
+
+    &__link {
+        width: auto;
+        position: relative;
+        outline: none;
+        line-height: 1;
+        color: $light-grey;
+        padding: ($spacer * 0.25) ($spacer * 0.35);
+        margin-right: ($spacer * 0.5);
+        overflow: hidden;
+
+        &:hover {
+            color: $primary;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__link-shadow {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0.2;
+        display: block;
+        background: $light-grey;
+        transform: translateX(-130%);
     }
 }

@@ -1,0 +1,21 @@
+.hero {
+    margin-bottom: $spacer * 3;
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding-right: $spacer;
+
+    &__content {
+        text-align: center;
+        padding: ($spacer * 2) ($spacer * 2) $spacer;
+        background-color: $smokey;
+    }
+
+    &__img {
+        width: 4rem;
+        padding-right: $spacer;
+        padding-bottom: $spacer;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

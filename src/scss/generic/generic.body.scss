@@ -1,7 +1,8 @@
 body {
-    @include fontDefault();
+    @include fontHeavier();
     font-size: 100%;
     font-size: 16px;
+    font-weight: 400;
     text-rendering: optimizeLegibility;
     text-rendering: geometricPrecision;
     font-smooth: always;
@@ -14,4 +15,6 @@ body {
     height: 100%;
     box-sizing: border-box;
     color: $dark-grey;
+    background: url('/img/sun.jpg') no-repeat center center fixed;
+    background-size: cover;
 }

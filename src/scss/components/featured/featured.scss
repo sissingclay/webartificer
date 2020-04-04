@@ -1,0 +1,11 @@
+.featured {
+    background-color: $white;
+    width: 100%;
+    padding: $spacer * 2 0;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

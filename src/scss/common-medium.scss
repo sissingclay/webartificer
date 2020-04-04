@@ -1,7 +1,14 @@
+@import './settings/settings.normalise-medium';
 @import './settings/settings.colours';
 @import './settings/settings.spacer';
+@import './settings/settings.animations';
 
 @import './mixins/mixins.font-family';
 
 @import './components/header/header-medium';
 @import './components/menu/menu-medium';
+@import './components/hero/hero-medium';
+@import './components/card/card-medium';
+@import './components/social/social-medium';
+@import './components/hero/hero-medium';
+@import './components/about/about-medium';

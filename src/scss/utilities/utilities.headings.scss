@@ -5,9 +5,11 @@
 .h5,
 .h6 {
     @include fontHeavier();
-    color: $grey;
+    color: $dark-grey;
+    font-weight: 700;
     margin-bottom: $spacer;
     line-height: 1;
+    letter-spacing: -4px;
 
     &.-no-margin-bt {
         margin-bottom: 0;
@@ -15,23 +17,35 @@
 
     &.-skimmy {
         @include fontDefault();
+        font-style: italic;
     }
 
-    &.-dark {
-        color: $dark-grey;
+    &.-underline {
+        border-bottom: dashed;
     }
 
-    &.-light {
-        color: $light-grey;
+    &.-caps {
+        text-transform: uppercase;
+    }
+
+    &.-large-mb {
+        margin-bottom: $spacer * 2;
     }
 }
 
 .h1 {
-    font-size: 3rem;
+    font-size: 3.25rem;
+    text-shadow: -6px 5px 0px rgba(255, 255, 255, 1);
+    font-weight: 900;
+    line-height: 0.8;
+
+    &.-small {
+        font-size: 2.5rem;
+    }
 }
 
 .h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
 }
 
 .h3 {

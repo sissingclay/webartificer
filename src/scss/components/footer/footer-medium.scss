@@ -1,0 +1,13 @@
+.social {
+    &__link {
+        &.-icon {
+            margin-left: $spacer * 1.5;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: $spacer * -1.5;
+        top: $spacer * -0.4;
+    }
+}

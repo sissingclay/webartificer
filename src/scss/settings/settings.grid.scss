@@ -1,0 +1,49 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+.col {
+    flex: 1 0 100%;
+    min-width: 100%;
+}
+
+.col-6 {
+    flex: 1 0 50%;
+    min-width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .col-md-2 {
+        flex: 1 0 16%;
+        min-width: 16%;
+    }
+
+    .col-md-3 {
+        flex: 1 0 33%;
+        min-width: 33%;
+    }
+
+    .col-md-4 {
+        flex: 1 0 33%;
+        min-width: 33%;
+    }
+
+    .col-md-6 {
+        flex: 1 0 50%;
+        min-width: 50%;
+    }
+
+    .col-md-9 {
+        flex: 1 0 66%;
+        min-width: 66%;
+    }
+}

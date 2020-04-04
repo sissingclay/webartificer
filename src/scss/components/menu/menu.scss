@@ -5,6 +5,7 @@
     background-color: $smokey;
     width: 100%;
     z-index: 9;
+    border-top: 3px solid $white;
 
     &__wrapper {
         overflow-x: scroll;
@@ -12,6 +13,7 @@
         white-space: nowrap;
         -ms-overflow-style: none; // Internet Explorer 10+
         scrollbar-width: none; // Firefox
+        display: flex;
 
         &::-webkit-scrollbar {
             display: none; // Safari and Chrome
@@ -23,5 +25,7 @@
         padding: ($spacer * 0.75) $spacer;
         display: inline-block;
         color: $dark-grey;
+        width: 25%;
+        text-align: center;
     }
 }

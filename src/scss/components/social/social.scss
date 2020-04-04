@@ -1,0 +1,43 @@
+.social {
+    &__icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        margin-right: $spacer * 0.5;
+    }
+
+    &__link {
+        font-size: 0.85rem;
+        padding-bottom: $spacer * 0.5;
+        position: relative;
+        color: $dark-grey;
+        display: inline-block;
+        margin-right: $spacer * 0.5;
+        margin-bottom: $spacer * 0.5;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover {
+            &:after {
+                transform: scaleY(4.5);
+                opacity: 0.2;
+            }
+        }
+
+        &:after {
+            content: '';
+            height: 3px;
+            background-color: $dark-grey;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            position: absolute;
+            transform-origin: bottom;
+            transition: background-color $transition-speed $transition-feel,
+                transform $transition-speed $transition-feel,
+                opacity $transition-speed $transition-feel;
+        }
+    }
+}

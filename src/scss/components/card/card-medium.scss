@@ -1,0 +1,10 @@
+.card {
+    &__img-holder {
+        width: 50%;
+        padding: 0 $spacer;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        height: 11rem;
+    }
+}

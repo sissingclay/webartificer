@@ -2,6 +2,8 @@
     flex: 1;
     width: 50%;
     flex-basis: 50%;
+    padding: $spacer;
+    text-align: center;
 
     &__body {
         background-color: $white;
@@ -20,10 +22,6 @@
 
     &__img {
         width: 100%;
-        padding: 0 $spacer;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        height: 5rem;
+        height: auto;
     }
 }

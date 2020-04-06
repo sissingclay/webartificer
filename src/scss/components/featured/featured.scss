@@ -1,11 +1,12 @@
 .featured {
     background-color: $white;
     width: 100%;
-    padding: $spacer * 2 0;
+    padding: 0 0 $spacer * 2;
 
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        align-items: center;
     }
 }

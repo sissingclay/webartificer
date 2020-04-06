@@ -4,6 +4,13 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const data = require('gulp-data');
 const sass = require('gulp-sass');
 const ts = require('gulp-typescript');
+const usemin = require('gulp-usemin');
+const minifyCss = require('gulp-minify-css');
+const minifyHtml = require('gulp-minify-html');
+const uglify = require('gulp-uglify');
+const rev = require('gulp-rev');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
 const tsProject = ts.createProject('tsconfig.json');
 
 const PATHS = {
@@ -35,7 +42,8 @@ function sassFC() {
     return src(`${PATHS.scss}/*.scss`)
         .pipe(
             sass({
-                precision: 10,
+                precision: 3,
+                outputStyle: 'compressed',
             }),
         )
         .pipe(dest(`${PATHS.dist}/css`))
@@ -53,6 +61,32 @@ function imgMoveFC() {
         .pipe(dest(`${PATHS.dist}/img`))
         .pipe(browserSync.reload({ stream: true }));
 }
+
+// function imgMoveFC() {
+//     return src(`${PATHS.img}/**`)
+//         .pipe(
+//             imagemin(
+//                 [
+//                     imagemin.gifsicle({ interlaced: true }),
+//                     imagemin.jpegtran({ progressive: true }),
+//                     imagemin.optipng({ optimizationLevel: 5 }),
+//                     imagemin.svgo({
+//                         plugins: [
+//                             { removeViewBox: false },
+//                             { cleanupIDs: false },
+//                         ],
+//                     }),
+//                 ],
+//                 {
+//                     progressive: true,
+//                     svgoPlugins: [{ removeViewBox: false }],
+//                     use: [pngquant()],
+//                 },
+//             ),
+//         )
+//         .pipe(dest(`${PATHS.dist}/img`))
+//         .pipe(browserSync.reload({ stream: true }));
+// }
 
 function faviconMoveFC() {
     return src(`${PATHS.favicon}/**`)
@@ -81,6 +115,24 @@ function serve() {
     watch([PATHS.favicon]).on('change', series('faviconMoveFC'));
 }
 
+function useminFC() {
+    return src(`${PATHS.dist}**/*.html`)
+        .pipe(
+            usemin({
+                css: [minifyCss, rev],
+                html: [
+                    function () {
+                        return minifyHtml({ empty: true });
+                    },
+                ],
+                js: [uglify, rev],
+                inlinejs: [uglify],
+                inlinecss: [minifyCss],
+            }),
+        )
+        .pipe(dest(PATHS.dist));
+}
+
 exports.serve = serve;
 exports.nunjucksFC = nunjucksFC;
 exports.sassFC = sassFC;
@@ -88,13 +140,22 @@ exports.svgMoveFC = svgMoveFC;
 exports.imgMoveFC = imgMoveFC;
 exports.typescriptFC = typescriptFC;
 exports.faviconMoveFC = faviconMoveFC;
+exports.useminFC = useminFC;
 
 exports.default = series(
     nunjucksFC,
     sassFC,
     svgMoveFC,
     imgMoveFC,
-    typescriptFC,
     faviconMoveFC,
     serve,
+);
+
+exports.build = series(
+    nunjucksFC,
+    sassFC,
+    svgMoveFC,
+    imgMoveFC,
+    faviconMoveFC,
+    useminFC,
 );

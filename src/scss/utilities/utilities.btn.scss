@@ -3,9 +3,9 @@
     border: 2px solid $dark-grey;
     padding: $spacer;
     font-weight: 900;
-    transition: border-color $transition-speed $transition-feel;
+    transition: opacity $transition-speed $transition-feel;
 
     &:hover {
-        border-color: $white;
+        opacity: 0.8;
     }
 }

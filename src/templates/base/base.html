@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,19 +14,19 @@
             href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap"
             rel="stylesheet"
         />
-        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/common-v2.css" rel="stylesheet" />
         <link
-            href="/css/common-small.css"
+            href="/css/common-small-v2.css"
             media="(min-width:30em)"
             rel="stylesheet"
         />
         <link
-            href="/css/common-medium.css"
+            href="/css/common-medium-v2.css"
             media="(min-width:48.000em)"
             rel="stylesheet"
         />
         <link
-            href="/css/common-large.css"
+            href="/css/common-large-v2.css"
             media="(min-width:64.000em)"
             rel="stylesheet"
         />
@@ -82,7 +82,7 @@
             </section>
 
             <section class="hero">
-                <h1 class="h2 -caps">Building</h1>
+                <h1 class="h2 -caps">Crafting</h1>
                 <h2 class="h1 -caps">
                     digital <br />
                     products
@@ -108,7 +108,10 @@
         "-white" %} {% include "partials/partials.footer.html" ignore missing %}
     </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"
+        defer
+    ></script>
     <script>
         const btn = document.querySelector('.btn');
         const closed = document.querySelector('.slider__close');
@@ -167,12 +170,12 @@
         );
 
         const STEP = (e) => {
-            let x = (e.pageX - window.innerWidth / 2) / 120;
-            let y = (e.pageY - window.innerHeight / 2) / 60;
+            let x = ((e.pageX - window.innerWidth / 2) / 120) * 3;
+            let y = ((e.pageY - window.innerHeight / 2) / 60) * 1.5;
 
             requestAnimationFrame(() => {
-                title.style.textShadow = `${x * 4}px ${
-                    y * 2
+                title.style.textShadow = `${x > 8 ? 8 : x}px ${
+                    y > 8 ? 8 : y
                 }px 0px rgba(255, 255, 255, 1)`;
             });
         };

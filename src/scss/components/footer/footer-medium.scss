@@ -1,13 +1,15 @@
-.social {
-    &__link {
-        &.-icon {
-            margin-left: $spacer * 1.5;
+.footer {
+    &__container {
+        width: 49%;
+        display: inline-block;
+        vertical-align: middle;
+
+        &:last-of-type {
+            text-align: right;
         }
     }
 
-    &__icon {
-        position: absolute;
-        left: $spacer * -1.5;
-        top: $spacer * -0.4;
+    p {
+        font-size: 100%;
     }
 }

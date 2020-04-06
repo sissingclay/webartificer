@@ -1,0 +1,11 @@
+.btn {
+    background-color: transparent;
+    border: 2px solid $dark-grey;
+    padding: $spacer;
+    font-weight: 900;
+    transition: border-color $transition-speed $transition-feel;
+
+    &:hover {
+        border-color: $white;
+    }
+}

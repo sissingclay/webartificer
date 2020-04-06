@@ -3,6 +3,8 @@ const browserSync = require('browser-sync');
 const nunjucksRender = require('gulp-nunjucks-render');
 const data = require('gulp-data');
 const sass = require('gulp-sass');
+const ts = require('gulp-typescript');
+const tsProject = ts.createProject('tsconfig.json');
 
 const PATHS = {
     nunjucks: './src/templates',
@@ -10,6 +12,7 @@ const PATHS = {
     img: './src/img',
     dist: './build/',
     svg: './src/svg/**/*.svg',
+    favicon: './src/favicon/**',
 };
 
 function getDataForFile(file) {
@@ -51,6 +54,20 @@ function imgMoveFC() {
         .pipe(browserSync.reload({ stream: true }));
 }
 
+function faviconMoveFC() {
+    return src(`${PATHS.favicon}/**`)
+        .pipe(dest(`${PATHS.dist}`))
+        .pipe(browserSync.reload({ stream: true }));
+}
+
+function typescriptFC() {
+    return tsProject
+        .src()
+        .pipe(tsProject())
+        .js.pipe(dest(`${PATHS.dist}/js`))
+        .pipe(browserSync.reload({ stream: true }));
+}
+
 function serve() {
     browserSync({
         server: {
@@ -61,6 +78,7 @@ function serve() {
     watch([`${PATHS.nunjucks}/**`]).on('change', series('nunjucksFC'));
     watch([`${PATHS.scss}/**`]).on('change', series('sassFC'));
     watch([PATHS.svg]).on('change', series('svgMoveFC'));
+    watch([PATHS.favicon]).on('change', series('faviconMoveFC'));
 }
 
 exports.serve = serve;
@@ -68,5 +86,15 @@ exports.nunjucksFC = nunjucksFC;
 exports.sassFC = sassFC;
 exports.svgMoveFC = svgMoveFC;
 exports.imgMoveFC = imgMoveFC;
+exports.typescriptFC = typescriptFC;
+exports.faviconMoveFC = faviconMoveFC;
 
-exports.default = series(nunjucksFC, sassFC, svgMoveFC, imgMoveFC, serve);
+exports.default = series(
+    nunjucksFC,
+    sassFC,
+    svgMoveFC,
+    imgMoveFC,
+    typescriptFC,
+    faviconMoveFC,
+    serve,
+);

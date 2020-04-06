@@ -1,9 +1,9 @@
 .card {
-    width: 33%;
-    flex-basis: 33%;
-
     &__img {
         padding: 0 $spacer * 2;
-        height: 5rem;
+
+        img {
+            width: 75%;
+        }
     }
 }

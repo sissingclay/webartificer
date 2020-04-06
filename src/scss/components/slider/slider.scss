@@ -1,0 +1,58 @@
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    padding: $spacer * 2;
+    z-index: 2;
+
+    &__close {
+        background-color: $dark-grey;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: $white;
+        font-size: 27px;
+        transition: border $transition-speed $transition-feel,
+            background-color $transition-speed $transition-feel,
+            color $transition-speed $transition-feel;
+        top: $spacer;
+        right: $spacer;
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+        padding-top: 0.25rem;
+        border: 2px solid $dark-grey;
+
+        &:hover {
+            color: $dark-grey;
+            background-color: $white;
+        }
+    }
+
+    &__scroll {
+        overflow-y: scroll;
+        height: 100%;
+        -ms-overflow-style: none; // Internet Explorer 10+
+        scrollbar-width: none; // Firefox
+        &::-webkit-scrollbar {
+            display: none; // Safari and Chrome
+        }
+    }
+
+    &__list {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        line-height: 1.3;
+    }
+
+    &__item {
+        line-height: 1.8;
+        background: url('/svg/check.svg') no-repeat -5px 19px;
+        padding-left: $spacer * 2;
+        background-size: 30px 13px;
+        font-size: 1.25rem;
+    }
+}

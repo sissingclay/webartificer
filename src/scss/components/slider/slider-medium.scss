@@ -1,0 +1,12 @@
+.slider {
+    &__content {
+        display: inline-block;
+        width: 49%;
+        vertical-align: text-top;
+        padding-right: $spacer;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+}

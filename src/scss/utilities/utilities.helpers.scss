@@ -1,0 +1,51 @@
+.no-opacity {
+    opacity: 0;
+}
+
+.spinner {
+    transform-origin: 45.5% 11.5%;
+    position: absolute;
+    animation: rotateLargeCog 8s infinite linear;
+}
+
+#Stroke-107 {
+    position: absolute;
+    transform-origin: 56.2% 17.8%;
+    animation: rotateSmallCog 4s infinite linear;
+}
+
+@keyframes rotateSmallCog {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-90deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotateLargeCog {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

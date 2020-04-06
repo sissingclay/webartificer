@@ -22,6 +22,7 @@
 
     &.-underline {
         border-bottom: dashed;
+        line-height: 1.2;
     }
 
     &.-caps {
@@ -30,6 +31,14 @@
 
     &.-large-mb {
         margin-bottom: $spacer * 2;
+    }
+
+    &.-lh-1 {
+        line-height: 1.1;
+    }
+
+    &.-bolder {
+        font-weight: 900;
     }
 }
 
@@ -46,10 +55,15 @@
 
 .h2 {
     font-size: 2.5rem;
+
+    &.-small {
+        font-size: 2.2rem;
+    }
 }
 
 .h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: -2px;
 }
 
 .h4 {

@@ -1,8 +1,13 @@
 .social {
+    text-align: left;
+
     &__icon {
         width: 1.125rem;
         height: 1.125rem;
         margin-right: $spacer * 0.5;
+        position: absolute;
+        top: -5px;
+        left: -24px;
     }
 
     &__link {
@@ -11,11 +16,13 @@
         position: relative;
         color: $dark-grey;
         display: inline-block;
+        margin-left: $spacer * 1.5;
         margin-right: $spacer * 0.5;
         margin-bottom: $spacer * 0.5;
 
         &:last-of-type {
             margin-right: 0;
+            margin-left: 0;
         }
 
         &:hover {
@@ -38,6 +45,14 @@
             transition: background-color $transition-speed $transition-feel,
                 transform $transition-speed $transition-feel,
                 opacity $transition-speed $transition-feel;
+        }
+
+        &.-white {
+            color: $white;
+
+            &:after {
+                background-color: $white;
+            }
         }
     }
 }

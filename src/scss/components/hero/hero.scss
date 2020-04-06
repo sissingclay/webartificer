@@ -1,5 +1,5 @@
 .hero {
-    margin-bottom: $spacer * 3;
+    margin-bottom: $spacer * 2;
     position: relative;
     width: 100%;
     max-width: 650px;
@@ -17,5 +17,17 @@
         padding-bottom: $spacer;
         display: inline-block;
         vertical-align: middle;
+    }
+
+    &__wrapper {
+        position: relative;
+        margin-bottom: $spacer * 2;
+        height: 3rem;
+    }
+
+    &__message {
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 }

@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use './../css-var';
+@use './../helpers';
+
+@use './variables';
+
+@mixin core-styles {
+    .wa-logo {
+        color: var(map.get(css-var.$css, logo), variables.$colour);
+        fill: currentColor;
+        width: clamp(helpers.px-to-rem(150), 50%, helpers.px-to-rem(320));
+        height: clamp(helpers.px-to-rem(150), 50%, helpers.px-to-rem(320));
+    }
+}

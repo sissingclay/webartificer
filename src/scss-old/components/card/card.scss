@@ -1,7 +1,6 @@
 .card {
-    flex: 1;
+    display: flex;
     width: 50%;
-    flex-basis: 50%;
     padding: $spacer;
     text-align: center;
 
@@ -9,9 +8,7 @@
         background-color: $white;
         text-align: center;
         padding: 0 $spacer;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
+        display: flex;
         height: 7rem;
         padding: $spacer;
 
